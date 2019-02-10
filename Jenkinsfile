@@ -9,16 +9,16 @@ pipeline{
         stage('initializing'){
             steps{
                 echo "This is initializing stage"
-                sh label: '', script: 'clean package checkstyle:checkstyle'
             }
         }
         stage('Build'){
             steps{
                 echo "This is Build stage"
+                sh label: '', script: 'clean package checkstyle:checkstyle'
             }
             post {
                 success{
-                    echo "Archiving Artifacts"
+                echo "Archiving Artifacts"
                 archiveArtifacts '**/*.war'
                 echo "JUnit Test Report"
                 junit '**/surefire-reports/*.xml'
