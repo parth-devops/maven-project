@@ -1,16 +1,15 @@
 pipeline{
     agent any
     tools{
-        name: 'Java8'
-        type: 'jdk'
-        name: 'Maven'
-        type: 'maven'
+        type 'jdk'
+        type 'maven'
 
     }
     stages{
         stage('initializing'){
             steps{
                 echo "This is initializing stage"
+                sh label: '', script: 'clean package checkstyle:checkstyle'
             }
         }
         stage('Build'){
