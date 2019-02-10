@@ -32,6 +32,10 @@ pipeline{
                 echo "This is Deploy stage"
                 build 'Dev-Deploy'
             }
+            timeout(1) {
+            input 'Would you like to build the test job?'
+            }
+            build 'test'
         }
     }
 }
