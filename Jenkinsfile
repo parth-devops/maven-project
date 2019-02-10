@@ -1,4 +1,4 @@
-pipiline{
+pipeline{
     agent any
     tools{
         name 'Java8'
