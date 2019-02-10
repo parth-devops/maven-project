@@ -14,7 +14,7 @@ pipeline{
         stage('Build'){
             steps{
                 echo "This is Build stage"
-                sh label: '', script: 'clean package checkstyle:checkstyle'
+                sh label: '', script: 'mvn clean package checkstyle:checkstyle'
             }
             post {
                 success{
