@@ -36,7 +36,6 @@ pipeline{
                 }
                 build 'test'
             }
-            
         }
     }
 }
