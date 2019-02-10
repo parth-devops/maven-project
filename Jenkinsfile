@@ -1,10 +1,10 @@
 pipeline{
     agent any
     tools{
-        name 'Java8'
-        type 'jdk'
-        name 'Maven'
-        type 'maven'
+        name: 'Java8'
+        type: 'jdk'
+        name: 'Maven'
+        type: 'maven'
 
     }
     stages{
